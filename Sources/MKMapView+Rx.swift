@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 // Taken from RxCococa until marked as public
-func castOrThrow<T>(_ resultType: T.Type, _ object: Any) throws -> T {
+public func castOrThrow<T>(_ resultType: T.Type, _ object: Any) throws -> T {
     guard let returnValue = object as? T else {
         throw RxCocoaError.castingError(object: object, targetType: resultType)
     }
